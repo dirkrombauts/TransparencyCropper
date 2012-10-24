@@ -15,7 +15,7 @@ namespace Cropper
         return;
       }
 
-      var sourceDirectory = new System.IO.DirectoryInfo(args[0]);
+      var sourceDirectory = new DirectoryInfo(args[0]);
 
       if (!sourceDirectory.Exists)
       {
@@ -23,7 +23,7 @@ namespace Cropper
         return;
       }
 
-      var targetDirectory = new System.IO.DirectoryInfo(args[1]);
+      var targetDirectory = new DirectoryInfo(args[1]);
 
       if (!targetDirectory.Exists)
       {
@@ -32,11 +32,16 @@ namespace Cropper
       }
 
       var croppingThing = new CroppingThing();
+
       foreach (var fileInfo in sourceDirectory.EnumerateFiles("*.png", SearchOption.TopDirectoryOnly))
       {
-        var bitmap = croppingThing.Crop(new Bitmap(fileInfo.FullName));
-
-        bitmap.Save(Path.Combine(targetDirectory.FullName, fileInfo.Name), ImageFormat.Png);
+        using (var original = new Bitmap(fileInfo.FullName))
+        {
+          using (var bitmap = croppingThing.Crop(original))
+          {
+            bitmap.Save(Path.Combine(targetDirectory.FullName, fileInfo.Name), ImageFormat.Png);
+          }
+        }
       }
     }
   }

@@ -15,16 +15,16 @@ namespace Cropper
 
       Bitmap temp1 = new Bitmap(bitmap);
 
-      temp1 = this.RemoveTransparency(temp1);
+      temp1 = RemoveTransparency(temp1);
       temp1.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
-      Bitmap temp2 = this.RemoveTransparency(temp1);
+      Bitmap temp2 = RemoveTransparency(temp1);
       temp2.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
-      Bitmap temp3 = this.RemoveTransparency(temp2);
+      Bitmap temp3 = RemoveTransparency(temp2);
       temp3.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
-      Bitmap temp4 = this.RemoveTransparency(temp3);
+      Bitmap temp4 = RemoveTransparency(temp3);
       temp4.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
       return temp4;
@@ -62,7 +62,7 @@ namespace Cropper
       return result;
     }
 
-    private Bitmap RemoveTransparency(Bitmap bitmap)
+    private static Bitmap RemoveTransparency(Bitmap bitmap)
     {
       int newHeight = DetermineNewHeight(bitmap);
 
