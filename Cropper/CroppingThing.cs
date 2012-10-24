@@ -8,6 +8,11 @@ namespace Cropper
   {
     public Bitmap Crop(Bitmap bitmap)
     {
+      if (bitmap == null)
+      {
+        throw new ArgumentNullException("bitmap");
+      }
+
       Bitmap temp1 = new Bitmap(bitmap);
 
       temp1 = this.RemoveTransparency(temp1);

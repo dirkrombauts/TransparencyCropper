@@ -63,6 +63,7 @@
       <DependentUpon>CroppingATransparentPNGFile.feature</DependentUpon>
     </Compile>
     <Compile Include="CroppingATransparentPNGFileSteps.cs" />
+    <Compile Include="CroppingThingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
