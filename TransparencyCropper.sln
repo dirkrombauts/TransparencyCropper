@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cropper", "Cropper\Cropper.csproj", "{D11983A2-7BBF-4ECA-9AB5-41C99DED0186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cropper.Tests", "Cropper.Tests\Cropper.Tests.csproj", "{F65AFE22-6E18-47FC-8688-4191025010DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D11983A2-7BBF-4ECA-9AB5-41C99DED0186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11983A2-7BBF-4ECA-9AB5-41C99DED0186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11983A2-7BBF-4ECA-9AB5-41C99DED0186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11983A2-7BBF-4ECA-9AB5-41C99DED0186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65AFE22-6E18-47FC-8688-4191025010DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65AFE22-6E18-47FC-8688-4191025010DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65AFE22-6E18-47FC-8688-4191025010DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65AFE22-6E18-47FC-8688-4191025010DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
