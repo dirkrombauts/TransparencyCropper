@@ -18,7 +18,7 @@ namespace Cropper.Tests
         [When(@"I crop the transparency")]
         public void WhenICropTheTransparency()
         {
-          ScenarioContext.Current["image"] = new CroppingThing().Crop((Bitmap) ScenarioContext.Current["image"]);
+          ScenarioContext.Current["image"] = new CroppingThing().Crop((Bitmap)ScenarioContext.Current["image"]);
         }
         
         [Then(@"the result should be like ""(.*)""")]
