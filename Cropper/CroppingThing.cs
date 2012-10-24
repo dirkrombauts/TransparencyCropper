@@ -13,21 +13,19 @@ namespace Cropper
         throw new ArgumentNullException("bitmap");
       }
 
-      Bitmap temp1 = new Bitmap(bitmap);
+      Bitmap oneEdgeCropped = RemoveTransparency(bitmap);
+      oneEdgeCropped.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
-      temp1 = RemoveTransparency(temp1);
-      temp1.RotateFlip(RotateFlipType.Rotate90FlipNone);
+      Bitmap secondEdgeCropped = RemoveTransparency(oneEdgeCropped);
+      secondEdgeCropped.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
-      Bitmap temp2 = RemoveTransparency(temp1);
-      temp2.RotateFlip(RotateFlipType.Rotate90FlipNone);
+      Bitmap thirdEdgeCropped = RemoveTransparency(secondEdgeCropped);
+      thirdEdgeCropped.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
-      Bitmap temp3 = RemoveTransparency(temp2);
-      temp3.RotateFlip(RotateFlipType.Rotate90FlipNone);
+      Bitmap fourthEdgeCropped = RemoveTransparency(thirdEdgeCropped);
+      fourthEdgeCropped.RotateFlip(RotateFlipType.Rotate90FlipNone);
 
-      Bitmap temp4 = RemoveTransparency(temp3);
-      temp4.RotateFlip(RotateFlipType.Rotate90FlipNone);
-
-      return temp4;
+      return fourthEdgeCropped;
     }
 
     private static Bitmap CropBottomTransparency(Bitmap bitmap, int newHeight)
